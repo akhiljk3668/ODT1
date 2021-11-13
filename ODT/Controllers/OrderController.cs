@@ -41,5 +41,10 @@ namespace ODT.Controllers
             orderViewModel.OrderId = await orderRepositoy.InsertUpdateOrderDetail(orderViewModel);
             return RedirectToAction(nameof(Index));
         }
+        [HttpPost]
+        public async Task<IActionResult> GetOrders(string searchKey, int take, int skip)
+        {
+            return new JsonResult(await orderRepositoy.GetAllOrderDetails(string.Empty, 10, 1));
+        }
     }
 }
