@@ -94,7 +94,13 @@
     </tbody>
 </table>
 <script>
-    $.post("\GetOrders?searchKey=" + $("#txtSearch").val() + "&take=5&skip=1", function (data) {
+    $("#btnSearh").click(function () {
+        $.post("\GetOrders?searchKey=" + $("#txtSearch").val() + "&take=5&skip=1", function (data) {
+
+        });
+    });
+    $("#btnSearh").click(function () {
 
     });
+   
 </script>
